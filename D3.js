@@ -113,7 +113,7 @@ const characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   characters.push(starWarsCharacters[i].name);
 }
 
@@ -124,7 +124,7 @@ console.log(characters);
 */
 const femaleCharacters = [];
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
     femaleCharacters.push(starWarsCharacters[i]);
   }
@@ -150,7 +150,7 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].eye_color) {
     case "blue":
       eyeColor.blue.push(starWarsCharacters[i]);
@@ -176,11 +176,11 @@ console.log(eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-let x = 0;
+let i = 0;
 let crewMass = 0;
-while (x < starWarsCharacters.length) {
-  crewMass += starWarsCharacters[x].mass;
-  x++;
+while (i < starWarsCharacters.length) {
+  crewMass += starWarsCharacters[i].mass;
+  i++;
 }
 
 console.log(crewMass);
@@ -197,7 +197,7 @@ console.log(crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-crewMass = 702;
+// crewMass = 702;
 
 if (crewMass < 500) {
   console.log("Ship is under loaded");
